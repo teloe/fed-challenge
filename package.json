@@ -1,0 +1,24 @@
+{
+  "name": "fed-challenge",
+  "version": "1.0.0",
+  "description": "[![Design](https://raw.githubusercontent.com/qualialabs/fed-challenge/master/designs/thumbnail.jpg)](https://raw.githubusercontent.com/qualialabs/fed-challenge/master/designs/page.jpg)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teloe/fed-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teloe/fed-challenge/issues"
+  },
+  "homepage": "https://github.com/teloe/fed-challenge#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2"
+  }
+}

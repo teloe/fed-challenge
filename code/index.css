@@ -1,9 +1,25 @@
 /*******************************
-            Global
-*******************************/
+Variables
+ *******************************/
+ :root {
+  --color-light-green: #dff1e8;
+  --color-green: #4daf7c;
+  --color-alt-green: #339366;
+  --color-gray: #555;
+  --color-light-gray: #646464;
+  --color-alt-gray: #7b7b7b;
+  --color-dark-gray: #202327;
 
+  --font-stack: "Lato", Arial, sans-serif; 
+  --header-stack: "Merriweather", Times New Roman, serif; 
+}
+
+
+/*******************************
+Global
+*******************************/
 html, body {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: var(--font-stack);
   margin: 0px;
   padding: 0px;
 }
@@ -17,49 +33,130 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Merriweather", Times New Roman, serif;
+  font-family: var(--header-stack);
+  font-weight: 400;
 }
-
-
-.button {
-
-}
-
 
 
 /*******************************
-              Page
+Page
 *******************************/
 
 .hero {
-
+    background-color: var(--color-light-green);
+    position: relative;
+    z-index: 2;
+    padding: 180px 0 100px;
+}
+.hero .logo {
+    position: absolute;
+    top: 47px;
+}
+.hero p {
+    color: var(--color-gray);
+    font-size: 19px;
+    max-width: 388px;
+    margin-bottom: 45px;
+}
+.page .ui.grid {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.page {
-
+.page .card-section {
+    padding: 110px 0 0;
+}
+.page .card-section .column:nth-of-type(4),
+.page .card-section .column:nth-of-type(5),
+.page .card-section .column:nth-of-type(6) {
+    margin-top: 75px;
+}
+.page .card {
+    width: 100%;
+    transition: box-shadow .3s ease .1s;
+}
+.page .card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,.08),0 15px 30px rgba(0,0,0,.2);
+}
+.page .card div.image {
+    background:linear-gradient(90deg,#2c2c2c,#141414);
+    padding: 74px 0;
+}
+.page .card img.image {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.page .card .header {
+    font-size: 22px!important;
+}
+.page .card .header:hover {
+    color: #09b159!important;
+}
+.page .card .description {
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--color-gray);
+}
+.page .bottom-cta {
+    background: url(images/cta-bg.png) no-repeat center bottom;
+    padding: 90px 0 130px;
+    /* background-size: cover; */
+}
+.page .bottom-cta .column {
+    text-align: center;
+}
+.page .bottom-cta .column h2 {
+    color: var(--color-alt-gray);
+    max-width: 330px;
+    margin: 0 auto;
+    font-size: 26px;
+}
+.page .bottom-cta .column h2 span {
+    color: var(--color-alt-green);
 }
 
 .footer {
-
+    background-color: var(--color-dark-gray);
+    padding: 24px 0;
+}
+.footer .image {
+    display: inline!important;
+}
+.footer span {
+    color: var(--color-light-gray);
+    font-size:11px;
+    margin-left: 5px;
 }
 
 
 /*******************************
-         Responsive
+Responsive
 *******************************/
 
 /* Small Monitor */
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
-
-
 }
 
-
 /* Tablet */
-@media screen and (max-width: 1024px) {
-
+@media screen and (min-width: 768px) {
+    .hero {
+        height: 600px;
+    }
 }
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+    .hero .column {
+        text-align: center;
+    }
+    .hero p {
+        max-width: 100%;
+    }
+    .hero .column .image {
+        width: 100%;
+    }
+    .hero .button {
+        margin-bottom: 45px;
+    }
 }
